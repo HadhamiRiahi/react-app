@@ -25,7 +25,7 @@ class AddCard extends Component {
             response => {
               if( response.status === 200){
                 
-                  alert('I am alert, nice to meet you')
+                  alert('success!')
                        
                 }
               this.props.history.push('/');
