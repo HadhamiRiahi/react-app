@@ -24,10 +24,8 @@ class AddCard extends Component {
           }).then(
             response => {
               if( response.status === 200){
-                
-                  alert('success!')
-                       
-                }
+                      alert('success!')
+                         }
               this.props.history.push('/');
               e.preventDefault();     
               

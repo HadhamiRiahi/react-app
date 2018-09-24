@@ -27,7 +27,7 @@
   "scripts": {
     "start": "set PORT=3001 && react-scripts start",
     "build": "react-scripts build",
-    "test": " mocha ./src/component/*.test.js --compilers js:babel-core/register --require ./testSetup.js",
+    "test": " react-scripts test ",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
