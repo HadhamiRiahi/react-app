@@ -11,8 +11,8 @@ WORKDIR /usr/src/loopback-app
 
 
 # Install app dependencies
-COPY package.json /usr/src/loopback-app/
-COPY package-lock.json /usr/src/loopback-app/
+COPY ./package.json /usr/src/loopback-app/
+COPY ./package-lock.json /usr/src/loopback-app/
 
 RUN npm install
 
