@@ -27,7 +27,7 @@ ENV NODE_ENV production
 ENV PORT 5000
 ENV PUBLIC_PATH "/"
 
-RUN npm run start:build
+
 
 
 # Main command
