@@ -20,13 +20,13 @@ RUN npm install
 COPY . /usr/src/react-app
 
 # Port to listener
-EXPOSE 3000
+EXPOSE 3001
 
 # Environment variables
 ENV NODE_ENV production
-ENV PORT 3000
+ENV PORT 3001
 ENV PUBLIC_PATH "/"
 
 
 # Main command
-CMD [ "npm", "run" ]
+CMD [ "npm", "start" ]

@@ -20,11 +20,11 @@ RUN npm install
 COPY . /usr/src/loopback-app
 
 # Port to listener
-EXPOSE 5000
+EXPOSE 3000
 
 # Environment variables
 ENV NODE_ENV production
-ENV PORT 5000
+ENV PORT 3000
 ENV PUBLIC_PATH "/"
 
 

@@ -1,8 +1,8 @@
 {
   "myappDb": {
-    "host": "localhost",
+    "host": "127.0.0.1",
     "port": 27017,
-    "url": "",
+    "url": "mongodb://mongodb:27017/cards",
     "database": "card",
     "password": "",
     "name": "myappDb",

@@ -1,19 +1,41 @@
 version: '3'
 services:
   front-end:
-    container_name: react-app
-    build : 
-      Dockerfile : ./client_src/Dockerfile
+    image : react
+    ports :
+      - "3001:3001"
+    volumes:
+      - ..:/front
+    depends_on:
+      - back-end
+  mongodb:
+    image: "mongo"
+    container_name: mongodb
+    command: mongod
+    ports:
+      - "27017:27017"
+    volumes:
+      - .:/mongodb_data
+    networks:
+      - all
     
+  back-end:
+    container_name: loopback-app
+    image: loopback
     ports :
       - "3000:3000"
     volumes:
-      - ../front
-  back-end:
-    container_name: loopback-app
-    build : .
-    ports :
-          - "5000:5000"
-    volumes:
-          ../backend
+      - ..:/backend
+    links:
+      - mongodb
+    networks:
+      - all
+    environment:
+      MONGO_URI: "127.0.0.1:27017"
 
+  
+ 
+   
+networks:
+  all:
+    
