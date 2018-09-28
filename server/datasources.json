@@ -2,9 +2,9 @@
   "myappDb": {
     "host": "127.0.0.1",
     "port": 27017,
-    "url": "mongodb://mongodb:27017/cards",
+    "url": "",
     "database": "card",
-    "password": "",
+    "password": "mongodb://mongodb:27017/cards",
     "name": "myappDb",
     "user": "",
     "connector": "mongodb"

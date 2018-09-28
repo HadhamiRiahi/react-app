@@ -32,7 +32,7 @@ class Layout extends Component {
   render() {
    
     const cardItem = this.state.cards.map((card,id)=>{
-      console.log(card);
+      
       return <Card   key={id} item={card}/>
     });
 

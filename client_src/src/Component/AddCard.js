@@ -43,27 +43,27 @@ class AddCard extends Component {
     <small class="form-text text-muted">required</small>
   </div>
   <div class="form-group">
-    <label>type</label>
+    <label>Type</label>
     <input  class="form-control" name="type" type="text"   ref="type" placeholder="type"/>
     <small class="form-text text-muted">required</small>
   </div>
   <div class="form-group">
-    <label>description</label>
+    <label>Description</label>
     <input  class="form-control" name="description" type="text"   ref="description" placeholder="description"/>
     
   </div>
   <div class="form-group">
-    <label>address</label>
+    <label>Address</label>
     <input  class="form-control" name="address" type="text"  ref="address" placeholder="address"/>
     <small class="form-text text-muted">required</small>
   </div>
   <div class="form-group">
-    <label>phone number</label>
+    <label>Phone Number</label>
     <input  class="form-control" name="phoneNumber" type="number"   ref="phoneNumber" placeholder="phoneNumber"/>
     <small class="form-text text-muted">required</small>
   </div>
   <div class="form-group">
-    <label>imageURL</label>
+    <label>ImageURL</label>
     <input  class="form-control" name="imageURL" type="text"  ref="image" placeholder="imageURL"/>
     <small class="form-text text-muted">required</small>
   </div>
