@@ -10,10 +10,11 @@ node {
       sh 'printenv'
     }
     stage('Build Docker test'){
+      sh 'systemctl start docker'
     sh 'docker build -t react-test -f ./client_src/Dockerfile.test --no-cache .'
     }
     stage('Docker test'){
-      sh 'docker start'
+      sh 'systemctl start docker'
       sh 'docker run --rm react-test'
     }
     stage('Clean Docker test'){
