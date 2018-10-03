@@ -11,7 +11,7 @@ node {
     }
     stage('Build Docker test'){
       sh 'service docker start'
-    sh 'docker build -t react-test -f ./client_src/Dockerfile.test --no-cache .'
+    sh 'docker build -t react-test -f ./client_src/Dockerfile.test  .'
     }
     stage('Docker test'){
       sh 'service docker start'
