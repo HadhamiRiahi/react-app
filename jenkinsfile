@@ -10,7 +10,7 @@ node {
       sh 'printenv'
     }
     stage('Build Docker test'){
-      sh 'systemctl start docker'
+      sh 'service docker start'
     sh 'docker build -t react-test -f ./client_src/Dockerfile.test --no-cache .'
     }
     stage('Docker test'){
