@@ -25,7 +25,7 @@ node {
       sh 'docker rmi react-test'
     }
     stage('Deploy'){
-      if(env.BRANCH_NAME == 'master'){
+     // if(env.BRANCH_NAME == 'master'){
         sh 'docker build -t react-app -f ./client_src/Dockerfile   --no-cache   .'
         sh 'docker build -t loopback-app   --no-cache .'
         sh 'docker build -t mongo  -f ./mongo/dockerfile   --no-cache .'
@@ -33,7 +33,7 @@ node {
         sh 'docker push loopback-app'
         sh 'docker push mongo '
         sh 'docker rmi -f react-app loopback-app'
-      }
+    //  }
     }
   }
   catch (err) {
