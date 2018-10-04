@@ -8,10 +8,14 @@ node {
       echo "Branch: ${env.BRANCH_NAME}"
       sh 'docker -v'
       sh 'printenv'
+    registry = "hadhamiriahi/jenkins"
+    registryCredential = 'dockerid'
     }
     stage('Build Docker test'){
       sh 'service docker start'
-    sh 'docker build -t react-test -f ./client_src/Dockerfile.test  .'
+      sh 'docker build -t react-test -f ./client_src/Dockerfile.test  .'
+      script{
+    dockerImage = docker.build registry + “:$BUILD_NUMBER” }
     }
     stage('Docker test'){
       sh 'service docker start'
