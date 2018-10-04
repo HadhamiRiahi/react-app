@@ -16,7 +16,7 @@ node {
       sh 'docker build -t react-test -f ./client_src/Dockerfile.test  .'
    //   script{
     //dockerImage = docker.build registry + “:$BUILD_NUMBER” }
-    //}
+    }
     stage('Docker test'){
       sh 'service docker start'
       sh 'docker run --rm react-test'
